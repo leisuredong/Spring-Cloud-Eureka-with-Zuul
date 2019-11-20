@@ -1,0 +1,17 @@
+server:
+  port: 8767
+
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka/
+
+spring:
+  application:
+    name: demo-gateway
+
+zuul:
+  routes:
+    web:
+      path: /web/**
+      serviceId: demo-web
