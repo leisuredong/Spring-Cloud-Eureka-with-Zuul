@@ -15,3 +15,12 @@ zuul:
     web:
       path: /web/**
       serviceId: demo-web
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
